@@ -16,7 +16,7 @@ class Home(LoginView):
   template_name = 'home.html'
 
 def about(request):
-  return HttpResponse('<h1>About</h1>')
+  return render(request, 'about.html')
 
 def signup(request):
   error_message = ''
@@ -36,4 +36,10 @@ def signup(request):
 def workout_index(request):
   workouts = Workout.objects.filter(user=request.user)
   return render(request, 'workouts/index.html', {'workouts': workouts})
+
+@login_required
+def workout_detail(request, workout_id):
+  workout = Workout.objects.get(id=workout_id)
+  # add set form here
+  return render(request, 'workouts/detail.html', {'workout': workout })
 
