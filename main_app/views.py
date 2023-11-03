@@ -7,6 +7,8 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin
 from .models import Workout, Set
 from django.views.generic.edit import CreateView
+from django import forms
+
 
 # PROTECT ROUTES: 
 # def (view functions): @login_required
@@ -46,5 +48,6 @@ def workout_detail(request, workout_id):
 
 class WorkoutCreate(LoginRequiredMixin, CreateView):
   model = Workout
-  fields = '__all__'
+  fields = ['date', 'title', 'duration', 'description']
+
 
