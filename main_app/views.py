@@ -5,6 +5,7 @@ from django.contrib.auth import login
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin
+from .models import Workout, Set
 
 # PROTECT ROUTES: 
 # def (view functions): @login_required
@@ -30,4 +31,9 @@ def signup(request):
   form = UserCreationForm()
   context = {'form': form, 'error_message': error_message}
   return render(request, 'signup.html', context)
+
+@login_required
+def workout_index(request):
+  workouts = Workout.objects.filter(user=request.user)
+  return render(request, 'workouts/index.html', {'workouts': workouts})
 

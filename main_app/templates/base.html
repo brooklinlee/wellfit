@@ -22,6 +22,7 @@
       </a>
       <ul>
         {% if user.is_authenticated %}
+          <li><a href="{% url 'workout-index' %}">Profile</a></li>
           <li><a href="{% url 'about' %}">About</a></li>
           <li><a href="{% url 'logout' %}">Log Out</a></li>
         {% else %}
