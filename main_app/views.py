@@ -6,6 +6,7 @@ from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin
 from .models import Workout, Set
+from django.views.generic.edit import CreateView
 
 # PROTECT ROUTES: 
 # def (view functions): @login_required
@@ -42,4 +43,8 @@ def workout_detail(request, workout_id):
   workout = Workout.objects.get(id=workout_id)
   # add set form here
   return render(request, 'workouts/detail.html', {'workout': workout })
+
+class WorkoutCreate(LoginRequiredMixin, CreateView):
+  model = Workout
+  fields = '__all__'
 
