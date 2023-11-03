@@ -1,11 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
-<body>
+{% extends 'base.html' %}
+{% load static %}
+
+{% block head %}
+<!-- stylesheet -->
+{% endblock%}
+
+{% block content %}
+
+{% if not user.is_authenticated %}
   <section>
     <form action="{% url 'home' %}" method="post" class="login">
       <h1>Login</h1>
@@ -15,5 +17,6 @@
       <button type="submit" class="btn submit">Login</button>
     </form>
   </section>
-</body>
-</html>
+{% endif %}
+
+{% endblock%}

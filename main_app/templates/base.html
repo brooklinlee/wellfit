@@ -5,30 +5,29 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>WellFit - Workouts</title>
+  <title>WellFit - Workout Tracker</title>
+  <!-- add favicon here -->
   <link rel="stylesheet" type='text/css' href="{% static 'css/base.css' %}">
   {% block head %}
   {% endblock %}
 </head>
 <body>
   <header>
-    <div class="header-logo-container">
+    <nav class="container">
       <a href="/">
         <img 
-          src="{% static "images/header-logo.svg" %}"
-          alt="The Cat Collector Logo"
+          src="{% static "images/WellFit-logo.svg" %}"
+          alt="WellFit Logo"
         >
       </a>
-    </div>
-    <nav>
       <ul>
         {% if user.is_authenticated %}
-        <li><a href="{% url 'about' %}">About</a></li>
-        <li><a href="{% url 'logout' %}">Log Out</a></li>
+          <li><a href="{% url 'about' %}">About</a></li>
+          <li><a href="{% url 'logout' %}">Log Out</a></li>
         {% else %}
-        <li><a href="{% url 'about' %}">About</a></li>
-        <li><a href="{% url 'home' %}">Login</a></li>
-        <li><a href="{% url 'signup' %}">Sign Up</a></li>
+          <li><a href="{% url 'about' %}">About</a></li>
+          <li><a href="{% url 'home' %}">Log In</a></li>
+          
         {% endif %}
       </ul>
     </nav>
