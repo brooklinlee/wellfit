@@ -7,6 +7,16 @@
 
 {% block content %}
 
-<h1>Workout Index</h1>
+<h1>Welcome back, {{user.username|title}}</h1>
+
+{% for workout in workouts %}
+  <div>
+    <h1>{{workout.title}}</h1>
+    <p>{{workout.date}}</p>
+    <p>{{workout.duration}}</p>
+  </div>
+
+{% endfor %}
+
 
 {% endblock%}
