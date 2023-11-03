@@ -7,6 +7,19 @@
 
 {% block content %}
 
-<h1>Workout Detail</h1>
+  <h1>Workout Detail</h1>
+  <h1>{{workout.title}}</h1>
+  <p>{{workout.date}}</p>
+  <p>{{workout.duration}}</p>
+
+  <h1>Set Detail</h1>
+  <h1></h1>
+
+  {% for set in workout.set_set.all %}
+  <h1>{{ set.movement }}</h1>
+  <p>{{ set.rep }}</p>
+  <p>{{ set.equipment }}</p>
+{% endfor %}
+
 
 {% endblock%}
