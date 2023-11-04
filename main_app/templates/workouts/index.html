@@ -9,6 +9,14 @@
 
 <main>
   <h1>Welcome back, {{user.username|title}}</h1>
+
+  {% if request.has_worked_out_today %}
+    <h1>Congrats on logging a workout today!</h1>
+  {% else %}
+    <h1>Looks like you haven't logged a workout yet today</h1>
+  {% endif %}
+
+
   {% for workout in workouts %}
     <div>
       <a href="{% url 'workout-detail' workout.id %}">

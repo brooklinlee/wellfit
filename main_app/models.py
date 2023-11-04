@@ -33,7 +33,8 @@ class Workout(models.Model):
     return reverse('workout-detail', kwargs={'workout_id': self.id})
   
   def worked_out_today(self):
-    return self.workout_set.filter(date=date.today()).count() >= 1
+    today = date.today()
+    return Workout.objects.filter(user=self.user, date=today).exists()
   
 
 class Set(models.Model):

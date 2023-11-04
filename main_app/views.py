@@ -10,6 +10,7 @@ from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django import forms
 from django.urls import reverse
 from .forms import SetForm, WorkoutForm
+from datetime import date
 
 
 # PROTECT ROUTES: 
@@ -40,6 +41,9 @@ def signup(request):
 @login_required
 def workout_index(request):
   workouts = Workout.objects.filter(user=request.user)
+  user=request.user
+  today = date.today()
+  request.has_worked_out_today = Workout.objects.filter(user=user, date=today).exists()
   return render(request, 'workouts/index.html', {'workouts': workouts})
 
 @login_required
