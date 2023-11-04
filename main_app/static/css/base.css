@@ -7,13 +7,17 @@ html, body {
   height: 100vh;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  /* font-family:'Raleway', sans-serif; */
+  font-family: 'DM Sans', sans-serif;
   --blue: #6A8AF8;
   --grey: #263034;
   --orange: #F87F4C;
   --pink: #FF81BA;
   --border: rgb(220, 220, 220); 
 }
+
+/* font-family: 'Berkshire Swash', serif;
+font-family: 'DM Sans', sans-serif;
+font-family: 'DM Serif Display', serif; */
 
 #root {
   height: 100%;
@@ -22,6 +26,10 @@ html, body {
 body {
   overflow: auto;
   padding-top: 80px;
+}
+
+h1 {
+  font-family: 'DM Serif Display', serif;
 }
 
 a {
