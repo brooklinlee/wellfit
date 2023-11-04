@@ -28,7 +28,7 @@
         <li><a href="{% url 'about' %}">About</a></li>
           <li><a href="{% url 'workout-index' %}">Profile</a></li>
           <li><a href="{% url 'workout-create' %}">Log a Workout</a></li>
-          <li><a href="">Log Out</a></li>
+          <li><a href="{% url 'logout' %}">Log Out</a></li>
         {% else %}
           <li><a href="{% url 'home' %}">Home</a></li>
           <li><a href="{% url 'about' %}">About</a></li>

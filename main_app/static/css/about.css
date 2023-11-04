@@ -1,0 +1,15 @@
+main {
+  display: flex;
+  flex-direction: row;
+}
+
+.dev {
+  width: 50%;
+  height: 100vh;
+  background-color: var(--orange);
+}
+
+.info {
+  width: 50%;
+  height: 100vh;
+}
