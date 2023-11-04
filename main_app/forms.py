@@ -8,8 +8,9 @@ class SetForm(ModelForm):
     fields = ['rep', 'movement', 'weight', 'equipment'] 
 
 class WorkoutForm(forms.ModelForm):
-    class Meta:
-        model = Workout
-        fields = ['date', 'title', 'duration', 'description']
+  class Meta:
+    model = Workout
+    fields = ['date', 'title', 'duration', 'description']
 
-    date = forms.DateField(widget=forms.DateInput(attrs={'type': 'date'}))
+  date = forms.DateField(widget=forms.DateInput(attrs={'type': 'date'}))
+  description = forms.CharField(widget=forms.Textarea(attrs={'rows': 4}))
