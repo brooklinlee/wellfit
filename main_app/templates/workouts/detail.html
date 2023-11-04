@@ -11,6 +11,12 @@
   <h1>{{workout.title}}</h1>
   <p>{{workout.date}}</p>
   <p>{{workout.duration}}</p>
+  <p>{{workout.description}}</p>
+
+  <a href="{% url 'workout-update' workout.id %}"><button>Update</button></a>
+  <a href="{% url 'workout-delete' workout.id %}"><button>Delete</button></a>
+  
+  
 
   <h1>Set Detail</h1>
   <h1></h1>

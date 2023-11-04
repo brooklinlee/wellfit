@@ -6,7 +6,7 @@ from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin
 from .models import Workout, Set
-from django.views.generic.edit import CreateView
+from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django import forms
 from django.urls import reverse
 
@@ -56,6 +56,13 @@ class WorkoutCreate(LoginRequiredMixin, CreateView):
     return super().form_valid(form)
   
   def get_success_url(self):
-        return reverse('workout-detail', kwargs={'workout_id': self.object.id})
+    return reverse('workout-detail', kwargs={'workout_id': self.object.id})
+  
+class WorkoutUpdate(LoginRequiredMixin, UpdateView):
+  model = Workout
+  fields = ['date', 'title', 'duration', 'description']
 
+class WorkoutDelete(LoginRequiredMixin, DeleteView):
+  model = Workout
+  success_url = '/workouts/'
 
