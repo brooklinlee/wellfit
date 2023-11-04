@@ -15,7 +15,7 @@ class SetForm(ModelForm):
 class WorkoutForm(forms.ModelForm):
   class Meta:
     model = Workout
-    fields = ['date', 'title', 'duration', 'description']
+    fields = ['date', 'title', 'workout_type', 'duration', 'description']
 
   date = forms.DateField(widget=forms.DateInput(attrs={'type': 'date'}))
   description = forms.CharField(widget=forms.Textarea(attrs={'rows': 4}))

@@ -18,8 +18,11 @@ from datetime import date
 # class(class-based views): LoginRequiredMixin
 
 # Create your views here.
-class Home(LoginView):
-  template_name = 'home.html'
+class Login(LoginView):
+  template_name = 'login.html'
+
+def home(request):
+  return render(request, 'home.html')
 
 def about(request):
   return render(request, 'about.html')

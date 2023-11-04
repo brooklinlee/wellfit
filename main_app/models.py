@@ -13,6 +13,26 @@ DURATION_CHOICES  = (
   ('More than 2 Hours', 'More than 2 Hours'),
 )
 
+WORKOUT_TYPE_CHOICES = [
+    ('cardio', 'Cardio'),
+    ('strength', 'Strength Training'),
+    ('flexibility', 'Flexibility'),
+    ('endurance', 'Endurance'),
+    ('HIIT', 'High-Intensity Interval Training'),
+    ('yoga', 'Yoga'),
+    ('pilates', 'Pilates'),
+    ('crossfit', 'CrossFit'),
+    ('swimming', 'Swimming'),
+    ('cycling', 'Cycling'),
+    ('running', 'Running'),
+    ('walking', 'Walking'),
+    ('aerobics', 'Aerobics'),
+    ('weightlifting', 'Weightlifting'),
+    ('calisthenics', 'Calisthenics'),
+    ('other', 'Other'),
+]
+
+
 # Create your models here.
 
 class Workout(models.Model):
@@ -24,6 +44,11 @@ class Workout(models.Model):
     default=DURATION_CHOICES[0][0]
   )
   description = models.CharField(max_length=1000)
+  workout_type = models.CharField(
+        max_length=20,
+        choices=WORKOUT_TYPE_CHOICES,
+        default=WORKOUT_TYPE_CHOICES[0][0]
+    )
   user = models.ForeignKey(User, on_delete=models.CASCADE)
 
   def __str__(self):

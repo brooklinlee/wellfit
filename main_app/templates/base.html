@@ -14,7 +14,7 @@
 <body>
   <header>
     <nav class="container">
-      <a href="/">
+      <a href="{% url 'home' %}">
         <img 
           src="{% static "images/WellFit-logo.svg" %}"
           alt="WellFit Logo"
@@ -25,10 +25,11 @@
         <li><a href="{% url 'about' %}">About</a></li>
           <li><a href="{% url 'workout-index' %}">Profile</a></li>
           <li><a href="{% url 'workout-create' %}">Log a Workout</a></li>
-          <li><a href="{% url 'logout' %}">Log Out</a></li>
+          <li><a href="">Log Out</a></li>
         {% else %}
+          <li><a href="{% url 'home' %}">Home</a></li>
           <li><a href="{% url 'about' %}">About</a></li>
-          <li><a href="{% url 'home' %}">Log In</a></li>
+          <li><a href="/">Login</a></li>
           <li><a href="{% url 'signup' %}">Sign Up</a></li>
         {% endif %}
       </ul>
