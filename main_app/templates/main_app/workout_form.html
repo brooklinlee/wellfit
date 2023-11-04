@@ -12,8 +12,8 @@
 {% else %}
   <h1>Log a New Workout</h1>
 {% endif %}
-<form action="" method="post">
-  {% csrf_token%}
+<form method="post">
+  {% csrf_token %}
   <table>
     {{ form.as_table }}
   </table>

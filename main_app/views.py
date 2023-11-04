@@ -9,7 +9,7 @@ from .models import Workout, Set
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django import forms
 from django.urls import reverse
-from .forms import SetForm
+from .forms import SetForm, WorkoutForm
 
 
 # PROTECT ROUTES: 
@@ -50,14 +50,14 @@ def workout_detail(request, workout_id):
 
 class WorkoutCreate(LoginRequiredMixin, CreateView):
   model = Workout
-  fields = ['date', 'title', 'duration', 'description']
+  form_class = WorkoutForm
 
   def form_valid(self, form):
     form.instance.user = self.request.user
     return super().form_valid(form)
-  
-  def get_success_url(self):
-    return reverse('workout-detail', kwargs={'workout_id': self.object.id})
+
+    def get_success_url(self):
+      return reverse('workout-detail', kwargs={'workout_id': self.object.id})
   
 class WorkoutUpdate(LoginRequiredMixin, UpdateView):
   model = Workout

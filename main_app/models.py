@@ -23,7 +23,6 @@ class Workout(models.Model):
     choices=DURATION_CHOICES,
     default=DURATION_CHOICES[0][0]
   )
-  # duration = models.DurationField(default="0:00")
   description = models.CharField(max_length=1000)
   user = models.ForeignKey(User, on_delete=models.CASCADE)
 
