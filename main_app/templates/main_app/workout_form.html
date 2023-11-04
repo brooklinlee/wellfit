@@ -12,7 +12,7 @@
 {% else %}
   <h1>Log a New Workout</h1>
 {% endif %}
-<form method="post">
+<form  method="post" autocomplete="off">
   {% csrf_token %}
   <table>
     {{ form.as_table }}

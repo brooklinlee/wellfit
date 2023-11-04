@@ -56,8 +56,8 @@ class WorkoutCreate(LoginRequiredMixin, CreateView):
     form.instance.user = self.request.user
     return super().form_valid(form)
 
-    def get_success_url(self):
-      return reverse('workout-detail', kwargs={'workout_id': self.object.id})
+  def get_success_url(self):
+    return reverse('workout-detail', kwargs={'workout_id': self.object.id})
   
 class WorkoutUpdate(LoginRequiredMixin, UpdateView):
   model = Workout
@@ -67,3 +67,11 @@ class WorkoutDelete(LoginRequiredMixin, DeleteView):
   model = Workout
   success_url = '/workouts/'
 
+@login_required
+def add_set(request, workout_id):
+  form = SetForm(request.POST)
+  if form.is_valid():
+    new_set = form.save(commit=False)
+    new_set.workout_id = workout_id
+    new_set.save()
+  return redirect('workout-detail', workout_id=workout_id)
