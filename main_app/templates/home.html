@@ -2,22 +2,43 @@
 {% load static %}
 
 {% block head %}
-<!-- stylesheet -->
+<link rel="stylesheet" type="text/css"href="{% static 'css/home.css' %}"/>
 {% endblock%}
 
 {% block content %}
-<h1>Home</h1>
 
-<!-- {% if not user.is_authenticated %}
-  <section>
-    <form action="{% url 'login' %}" method="post" class="login">
-      <h1>Login</h1>
-      {% csrf_token %}
-      {{ form.as_p }}
-      <input type="hidden" name="next" value="{{ next }}">
-      <button type="submit">Login</button>
-    </form>
+<main>
+  <section class="banner">
+    <div class="banner-text">
+      <h1 class="title">Get ready for change to happen</h1>
+    </div>
+    <div class="banner-image">
+      <h3>Image here</h3>
+    </div>
   </section>
-{% endif %} -->
+  <section class="benefits">
+    <div class="home-scroll-img"></div>
+    <div class="home-scroll-img"></div>
+    <div class="home-scroll-img"></div>
+    <div class="home-scroll-img"></div>
+  </section>
+  <section>
+    <h1></h1>
+  </section>
+  <section class="orange-banner">
+    <h1>We're here to help you become more fit and strong</h1>
+    <p>Ut assumenda sequi non dolor nobis quo consectetur sint At esse voluptates. Non repellat quisquam aut voluptas fugiat quo ipsum asperiores quo repellat soluta et reprehenderit delectus vel veniam reprehenderit et natus nihil. A esse doloremque non ullam dolor qui facere unde.</p>
+  </section>
+  <section class="cta">
+    <div class="cta-txt">
+      <h1>We're here to help you become more fit and strong</h1>
+      <p>Ut assumenda sequi non dolor nobis quo consectetur sint At esse voluptates. Non repellat quisquam aut voluptas fugiat quo ipsum asperiores quo repellat soluta et reprehenderit delectus vel veniam reprehenderit et natus nihil. A esse doloremque non ullam dolor qui facere unde.</p>
+    </div>
+    <div class="cta-img">
+      <p>IMG</p>
+    </div>
+  </section>
+  </section>
+</main>
 
 {% endblock%}
