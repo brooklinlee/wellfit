@@ -7,7 +7,7 @@
 
 {% block content %}
 
-<main>
+
   <h1>Welcome back, {{user.username|title}}</h1>
 
   {% if request.has_worked_out_today %}
@@ -27,6 +27,6 @@
     </div>
   {% endfor %}
 
-</main>
+
 
 {% endblock%}

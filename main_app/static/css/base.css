@@ -29,6 +29,9 @@ body {
   overflow: auto;
   /* padding-top: 80px; */
 }
+main {
+  padding-top: 80px;
+}
 
 h1 {
   font-family: 'DM Serif Display', serif;
