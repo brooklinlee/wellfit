@@ -9,6 +9,7 @@ from .models import Workout, Set
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django import forms
 from django.urls import reverse
+from .forms import SetForm
 
 
 # PROTECT ROUTES: 
@@ -44,8 +45,8 @@ def workout_index(request):
 @login_required
 def workout_detail(request, workout_id):
   workout = Workout.objects.get(id=workout_id)
-  # add set form here
-  return render(request, 'workouts/detail.html', {'workout': workout })
+  set_form = SetForm()
+  return render(request, 'workouts/detail.html', {'workout': workout, 'set_form': set_form })
 
 class WorkoutCreate(LoginRequiredMixin, CreateView):
   model = Workout

@@ -40,6 +40,7 @@ class Workout(models.Model):
 class Set(models.Model):
   rep = models.IntegerField()
   movement = models.CharField(max_length=250)
+  weight = models.IntegerField()
   equipment = models.CharField(max_length=100)
   workout = models.ForeignKey(Workout, on_delete=models.CASCADE)
 

@@ -27,6 +27,13 @@
   <p>{{ set.equipment }}</p>
 {% endfor %}
 
-<!-- add set form -->
+<h1>Add a Set to your Workout</h1>
+<form method="post" autocomplete="off">
+  <table>
+  {% csrf_token %}
+  {{ set_form.as_table}}
+</table>
+  <button type="submit">Add a Set</button>
+</form>
 
 {% endblock%}
