@@ -25,6 +25,11 @@
   <h1>{{ set.movement }}</h1>
   <p>{{ set.rep }}</p>
   <p>{{ set.equipment }}</p>
+  <form method="POST" action="{% url 'set-delete' workout.id set.id %}">
+    {% csrf_token %}
+    <button type="submit">Delete</button>
+</form>
+
 {% endfor %}
 
 <h1>Add a Set to your Workout</h1>

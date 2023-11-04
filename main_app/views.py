@@ -75,3 +75,13 @@ def add_set(request, workout_id):
     new_set.workout_id = workout_id
     new_set.save()
   return redirect('workout-detail', workout_id=workout_id)
+
+@login_required
+def set_delete(request, workout_id, set_id):
+  if request.method == 'POST':
+    set_to_delete = Set.objects.get(id=set_id)
+    set_to_delete.delete()
+    return redirect('workout-detail', workout_id=workout_id)
+  else:
+    return redirect('workout-detail', workout_id=workout_id)
+

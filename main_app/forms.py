@@ -1,4 +1,4 @@
-from django.forms import ModelForm
+from django.forms import ModelForm, NumberInput
 from .models import Set, Workout
 from django import forms
 
@@ -6,6 +6,14 @@ class SetForm(ModelForm):
   class Meta:
     model = Set
     fields = ['rep', 'movement', 'weight', 'equipment'] 
+    widgets = {
+      'rep': NumberInput(attrs={'step': 1}),
+      'weight': NumberInput(attrs={'step': 5}),
+    }
+
+    # rep = forms.IntegerField(widget=forms.NumberInput(attrs={'step': 1}))
+    # weight = forms.IntegerField(widget=forms.NumberInput(attrs={'step': 5}))
+
 
 class WorkoutForm(forms.ModelForm):
   class Meta:
