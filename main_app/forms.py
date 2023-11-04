@@ -11,9 +11,6 @@ class SetForm(ModelForm):
       'weight': NumberInput(attrs={'step': 5}),
     }
 
-    # rep = forms.IntegerField(widget=forms.NumberInput(attrs={'step': 1}))
-    # weight = forms.IntegerField(widget=forms.NumberInput(attrs={'step': 5}))
-
 
 class WorkoutForm(forms.ModelForm):
   class Meta:

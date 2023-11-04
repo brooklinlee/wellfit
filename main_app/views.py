@@ -65,7 +65,8 @@ class WorkoutCreate(LoginRequiredMixin, CreateView):
   
 class WorkoutUpdate(LoginRequiredMixin, UpdateView):
   model = Workout
-  fields = ['date', 'title', 'duration', 'description']
+  # fields = ['date', 'title', 'duration', 'description']
+  form_class = WorkoutForm
 
 class WorkoutDelete(LoginRequiredMixin, DeleteView):
   model = Workout
