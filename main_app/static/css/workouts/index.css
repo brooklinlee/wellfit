@@ -1,0 +1,66 @@
+main {
+  padding-top: 45px;
+}
+
+.index-header{
+  height: 327px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.index-header h1 {
+  flex: 2;
+  text-align: left;
+  margin: 0;
+  line-height: 0.85;
+}
+
+.index-header img {
+  height: 34px;
+  width: 100px;
+  float: right;
+  transform: rotate(90deg);
+  margin-right: 0;
+}
+
+
+#workouts {
+  font-size: 100px;
+  color: var(--blue);
+  margin-left: 75px;
+}
+
+#username{
+  font-size: 60px;
+  color: var(--pink);
+}
+
+@media (max-width: 768px) {
+  .index-header{
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    text-align: center;
+    padding-top: 48px;
+  }
+
+  #workouts, #username {
+    text-align: center;
+    margin: 12px auto;
+  }
+
+  #workouts br,
+  #username br {
+    display: none;
+  }
+
+  .index-header img  {
+    height: auto;
+    max-width: 100%;
+    float: none;
+    transform: none;
+    width: 100px;
+  }
+}

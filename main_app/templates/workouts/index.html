@@ -2,10 +2,19 @@
 {% load static %}
 
 {% block head %}
-<!-- stylesheet -->
+<link rel="stylesheet" type="text/css"href="{% static 'css/workouts/index.css' %}"/>
 {% endblock%}
 
 {% block content %}
+
+<section class="index-header">
+  <h1 id="workouts">WORK<br>OUTS</h1>
+  <h1 id="username">by <br>{{user.username|title}}</h1>
+  <img src="{% static "images/dots.svg" %}"" alt="three colorful dots">
+</section>
+<section>
+
+</section>
 
 
   <h1>Welcome back, {{user.username|title}}</h1>
