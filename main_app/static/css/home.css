@@ -48,11 +48,15 @@ main {
   align-items: center;
 }
 
-.banner-image img {
+.banner-image div {
   height: 536px;
   width: 536px;
   padding-top: 80px;
+  margin-top: 60px;
+  margin-right: 40px;
   border-radius: 8px 48px 8px 8px; 
+  background-image: url('../images/banner-img.svg');
+  background-size: cover;
 }
 
 /* section 2 */
@@ -126,6 +130,10 @@ main {
   background-image: url('../images/4.svg');
 }
 
+#img5 {
+  background-image: url('../images/5.svg');
+}
+
 
 /* section 3 */
 .orange-banner {
@@ -192,7 +200,7 @@ main {
       display: none;
     }
 
-    .banner-image img {
+    .banner-image div {
       display: none;
     }
   .cta{
