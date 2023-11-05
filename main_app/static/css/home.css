@@ -60,7 +60,8 @@ main {
   height: 300px;
   width: 100%; 
   white-space: nowrap; 
-  overflow-x: auto; 
+  overflow-x: auto;
+  overflow-y: hidden;
 }
 
 .home-scroll-img {
@@ -78,7 +79,6 @@ main {
 .home-scroll-img h1 {
   color: var(--grey);
   margin: 0;
-  font-size: 45px;
 }
 
 .img-txt {
@@ -105,6 +105,9 @@ main {
 
 #no-border {
   border: none;
+  font-size: 40px;
+  align-self: center;
+  margin-top: 68px;
 }
 
 #img1 {
