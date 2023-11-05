@@ -12,11 +12,12 @@
   <h1 id="username">by <br>{{user.username|title}}</h1>
   <img src="{% static "images/dots.svg" %}"" alt="three colorful dots">
 </section>
-<section>
+<section class="profile-message">
   {% if request.has_worked_out_today %}
     <h1>Congrats on logging a workout today!</h1>
   {% else %}
     <h1>Looks like you haven't logged a workout yet today</h1>
+    <a href="{% url 'workout-create' %}"><button>Log one now?</button></a>
   {% endif %}
 </section>
 <section class="workout-section">

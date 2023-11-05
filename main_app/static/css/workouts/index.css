@@ -37,6 +37,10 @@ main {
   color: var(--pink);
 }
 
+.profile-message {
+  text-align: center;
+}
+
 .workout-section {
   display: flex;
   flex-direction: row-reverse;
