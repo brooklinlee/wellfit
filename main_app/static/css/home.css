@@ -194,8 +194,8 @@ main {
 }
 
 .cta-img-div {
-  height: 400px;
-  width: 400px;
+  height: 300px;
+  width: 300px;
   border-radius: 80px;
   background-image: url('../images/6.svg');
   background-size: cover;
@@ -258,9 +258,15 @@ main {
     height: fit-content;
   }
 
-  .orange-banner > div:nth-child(1) {
-    border-right: none;
-    border-bottom: 3px solid var(--background);
+  .orange-banner > div:nth-child(2) {
+    border-top: 3px solid var(--background);
+    border-left: none;
+  }
+
+  .orange-banner h1 {
+    margin: 48px auto;
+    padding: 0;
+    align-self: center;
   }
 
   .cta{
@@ -272,7 +278,6 @@ main {
   }
 
   .cta-img {
-    background-color: var(--background);
-    width: a;
+    display: none;
   }
 }
