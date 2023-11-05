@@ -15,20 +15,14 @@ DURATION_CHOICES  = (
 
 WORKOUT_TYPE_CHOICES = [
     ('cardio', 'Cardio'),
-    ('strength', 'Strength Training'),
+    ('weightlifting', 'Weightlifting'),
     ('flexibility', 'Flexibility'),
-    ('endurance', 'Endurance'),
     ('HIIT', 'High-Intensity Interval Training'),
     ('yoga', 'Yoga'),
     ('pilates', 'Pilates'),
-    ('crossfit', 'CrossFit'),
     ('swimming', 'Swimming'),
     ('cycling', 'Cycling'),
-    ('running', 'Running'),
     ('walking', 'Walking'),
-    ('aerobics', 'Aerobics'),
-    ('weightlifting', 'Weightlifting'),
-    ('calisthenics', 'Calisthenics'),
     ('other', 'Other'),
 ]
 
