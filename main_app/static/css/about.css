@@ -1,6 +1,8 @@
 main {
   display: flex;
   flex-direction: row;
+  height: 100vh;
+  overflow: hidden;
 }
 
 .left {
@@ -18,6 +20,7 @@ main {
 .right {
   width: 50%;
   height: 100vh;
+  margin: 48px;
 }
 
 @media (max-width: 840px) {
@@ -28,6 +31,8 @@ main {
     text-align: center;
     padding-top: 48px;
     background-color: var(--grey);
+    overflow: visible;
+    height: fit-content;
   }
 
   .left {
