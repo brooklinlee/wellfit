@@ -25,7 +25,6 @@ main {
   margin-right: 0;
 }
 
-
 #workouts {
   font-size: 100px;
   color: var(--blue);
@@ -39,6 +38,9 @@ main {
 
 .profile-message {
   text-align: center;
+  margin-top: 0;
+  margin-bottom: 36px;
+  font-size: 24px;
 }
 
 .workout-section {
@@ -52,11 +54,28 @@ main {
 }
 
 .workout-card {
-  height: 375px;
-  width: 375px;
+  height: 300px;
+  width: 300px;
   background-image: linear-gradient(to right bottom, #6a8af8, #b17be6, #dd6cc7, #f765a2, #ff697c, #ff6e75, #ff736e, #ff7968, #ff787d, #ff7891, #ff7ca6, #ff81ba);
   border-radius: 4px 36px 4px 36px;
+  display: flex; 
+  flex-direction: column; 
+  justify-content: flex-end; 
+  padding: 20px; 
+  margin-bottom: 48px;
+  padding-bottom: 48px;
 }
+
+.workout-card h1 {
+  font-size: 40px;
+  margin-bottom: 8px;
+}
+
+.workout-card p {
+  font-size: 20px;
+  margin: 0; 
+}
+
 
 @media (max-width: 768px) {
   .index-header{
