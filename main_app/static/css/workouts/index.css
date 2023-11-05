@@ -64,6 +64,12 @@ main {
   padding: 20px; 
   margin-bottom: 48px;
   padding-bottom: 48px;
+  transition: all .2s ease-in-out;
+}
+
+.workout-card:hover {
+  background-image: linear-gradient(to left top, #6a8af8, #b17be6, #dd6cc7, #f765a2, #ff697c, #ff6e75, #ff736e, #ff7968, #ff787d, #ff7891, #ff7ca6, #ff81ba);
+  transform: scale(1.1);
 }
 
 .workout-card h1 {
