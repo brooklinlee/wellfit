@@ -72,6 +72,7 @@ main {
   margin: 35px;
   vertical-align: top;
   white-space: normal;
+  border: 2px solid var(--grey);
 }
 
 .home-scroll-img h1 {
@@ -81,7 +82,29 @@ main {
 }
 
 .img-txt {
+  height: 220px;
+  width: 200px;
   white-space: normal;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  margin: 0;
+  padding: 0;
+  margin-left: 8px;
+}
+
+.img-txt h1,
+.img-txt p {
+  margin: 0;
+  padding: 0;
+}
+
+.img-txt h1 {
+  font-size: 20px;
+}
+
+#no-border {
+  border: none;
 }
 
 #img1 {
