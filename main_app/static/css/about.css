@@ -3,13 +3,42 @@ main {
   flex-direction: row;
 }
 
-.dev {
+.left {
   width: 50%;
   height: 100vh;
-  background-color: var(--orange);
+  background-color: var(--grey);
+  display: flex;
+  justify-content: center;
 }
 
-.info {
+.left img {
+  width: 90%;
+}
+
+.right {
   width: 50%;
   height: 100vh;
+}
+
+@media (max-width: 840px) {
+  main {
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    text-align: center;
+    padding-top: 48px;
+    background-color: var(--grey);
+  }
+
+  .left {
+    height: 50vh;
+  }
+
+  .left img {
+    margin-bottom: 0;
+  }
+
+  .right > * {
+    color: var(--background);
+  }
 }
