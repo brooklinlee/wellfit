@@ -19,9 +19,9 @@
     <h1>Looks like you haven't logged a workout yet today</h1>
   {% endif %}
 </section>
-<section>
+<section class="workout-section">
   {% for workout in workouts %}
-    <div>
+    <div class="workout-card">
       <a href="{% url 'workout-detail' workout.id %}">
         <h1>{{workout.title}}</h1>
         <p>{{workout.date}}</p>
