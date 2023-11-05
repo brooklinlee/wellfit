@@ -37,14 +37,17 @@ main {
   }
 
   .left {
-    height: 50vh;
+    height: 30vh;
+    align-self: center;
   }
 
   .left img {
-    margin-bottom: 0;
+    margin: -200px;
+
   }
 
   .right > * {
     color: var(--background);
   }
+
 }

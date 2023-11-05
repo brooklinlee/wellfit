@@ -2,7 +2,7 @@
 {% load static %}
 
 {% block head %}
-<!-- stylesheet -->
+<link rel="stylesheet" type="text/css"href="{% static 'css/form.css' %}"/>
 {% endblock%}
 
 {% block content %}
@@ -11,6 +11,7 @@
   <h1>Edit {{ workout.title }}</h1>
 {% else %}
   <h1>Log a New Workout</h1>
+  <hr>
 {% endif %}
 <form  method="post" autocomplete="off">
   {% csrf_token %}

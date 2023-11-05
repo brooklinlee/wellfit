@@ -42,6 +42,12 @@ a {
   color: var(--grey);
 }
 
+label {
+  /* color: var(--primary); */
+  font-weight: 800;
+  font-size: 18px;
+}
+
 .title {
   font-family: 'Berkshire Swash', serif;
 }
