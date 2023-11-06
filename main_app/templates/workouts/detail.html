@@ -2,13 +2,16 @@
 {% load static %}
 
 {% block head %}
-<!-- stylesheet -->
+<link rel="stylesheet" type="text/css"href="{% static 'css/workouts/workout-detail.css' %}"/>
 {% endblock%}
 
 {% block content %}
 
-  <h1>Workout Detail</h1>
-  <h1>{{workout.title}}</h1>
+  <div class="header">
+    <h1>{{workout.workout_type}}</h1>
+    
+  </div>
+  
   <p>{{workout.date}}</p>
   <p>{{workout.duration}}</p>
   <p>{{workout.description}}</p>
