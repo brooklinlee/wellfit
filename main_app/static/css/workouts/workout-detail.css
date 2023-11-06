@@ -135,3 +135,36 @@ td > textarea {
 .description p {
   font-size: 20px;
 }
+
+@media (max-width: 750px) {
+  .wrkt {
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+
+  .date, .duration {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+
+  .date h1, 
+  .date p, 
+  .duration h1,
+  .duration p {
+    margin: 12px 0;
+    padding: 0;
+  }
+
+  .description {
+    margin: 0;
+    padding: 0;
+  }
+
+}
