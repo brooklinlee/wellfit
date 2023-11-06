@@ -51,8 +51,6 @@ main {
     margin-top: 0;
   }
 
-
-
   .right > * {
     color: var(--background);
   }

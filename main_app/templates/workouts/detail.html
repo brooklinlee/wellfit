@@ -10,16 +10,7 @@
   <div class="header">
     <h1>{{workout.workout_type}}</h1>
   </div>
-  <!-- <div class="wrkt-detials">
-    <div class="date">
-      <h1>Date: </h1>
-      <p>{{workout.date}}</p>
-    </div>
-    <div class="duration">
-      <h1>Duration: </h1>
-      <p>{{workout.duration}}</p>
-    </div>
-  </div> -->
+  </div> 
   <div class="wrkt">
     <div class="wrkt-detials">
       <div class="date">
@@ -35,25 +26,41 @@
       <p>{{workout.description}}</p>
     </div>
   </div>
-
   <a href="{% url 'workout-update' workout.id %}"><button>Update</button></a>
   <a href="{% url 'workout-delete' workout.id %}"><button>Delete</button></a>
-  
-  
+    <div class="if-set">
+      {% if workout.set_set.all %}
+      <h1 class="">Sets</h1>
+      {% else %}
+      <h1>Add a set to your workout?</h1>
+      {% endif%}
+    </div>
+    <div class="set-container">
 
-  <h1>Set Detail</h1>
-  <h1></h1>
-
-  {% for set in workout.set_set.all %}
-  <h1>{{ set.movement }}</h1>
-  <p>{{ set.rep }}</p>
-  <p>{{ set.equipment }}</p>
-  <form method="POST" action="{% url 'set-delete' workout.id set.id %}">
-    {% csrf_token %}
-    <button type="submit">Delete</button>
-</form>
-
-{% endfor %}
+      {% for set in workout.set_set.all %}
+      <div class="set-card">
+        <div class="movement">
+          <h1>Movement:</h1>
+          <p>{{ set.movement }}</p>
+        </div>
+        <div class="reps">
+          <h1>Num of Reps:</h1>
+          <p>{{ set.rep }}</p>
+        </div>
+        <div class="equip">
+          <h1>Equipment Used:</h1>
+          <p>{{ set.equipment }}</p>
+        </div>
+        <div class="delete">
+          <form method="POST" action="{% url 'set-delete' workout.id set.id %}">
+            {% csrf_token %}
+            <button type="submit">Delete</button>
+          </form>
+        </div>
+      </div>
+      {% endfor %}
+      
+    </div>
 
 <h1>Add a Set to your Workout</h1>
 <form action="{% url 'add-set' workout.id %}" method="post" autocomplete="off">
