@@ -42,9 +42,16 @@ main {
   }
 
   .left img {
-    margin: -200px;
-
+    height: 200px;
+    width: 200px;
+    /* margin: -200px; */
   }
+
+  .right {
+    margin-top: 0;
+  }
+
+
 
   .right > * {
     color: var(--background);
