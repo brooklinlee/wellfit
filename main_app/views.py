@@ -34,7 +34,7 @@ def signup(request):
     if form.is_valid():
       user = form.save()
       login(request, user)
-      return redirect('cat-index')
+      return redirect('home')
     else:
       error_message = 'Invalid sign up - try again'
   form = UserCreationForm()
@@ -67,6 +67,7 @@ class WorkoutCreate(LoginRequiredMixin, CreateView):
   def get_success_url(self):
     return reverse('workout-detail', kwargs={'workout_id': self.object.id})
   
+
 class WorkoutUpdate(LoginRequiredMixin, UpdateView):
   model = Workout
   # fields = ['date', 'title', 'duration', 'description']
