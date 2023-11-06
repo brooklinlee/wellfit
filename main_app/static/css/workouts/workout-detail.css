@@ -50,8 +50,6 @@ td > textarea {
   background-clip: text;
   -webkit-background-clip: text; 
   color: transparent;
-  /* -webkit-text-stroke: 2px white;
-  text-stroke: 2px white; */
 }
 
 .header {
@@ -65,8 +63,6 @@ td > textarea {
   padding-top: 80px;
   color: var(--background);
   font-size: 70px;
-  width: fit-content;
-  border-bottom: 3px solid var(--background);
 }
 
 .wrkt {
@@ -155,6 +151,8 @@ td > textarea {
   border-radius: 4px 36px 4px 36px;
   transform: scale(1.1);
   box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  /* margin-bottom: 12px; */
+  padding-bottom: 16px;
 }
 
 .reps,
@@ -200,6 +198,17 @@ td > textarea {
   font-size: 20px;
   margin: 0;
   padding-bottom: 10px; 
+}
+
+.set-on-flip {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+#set-delete-btn {
+  font-size: 10px;
+  font-weight: 800;
+  font-family: 'Berkshire Swash', serif;
 }
 
 @media (max-width: 750px) {

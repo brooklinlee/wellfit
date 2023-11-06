@@ -43,23 +43,25 @@
         <div class="movement">
           <h1>{{ set.movement }}</h1>
         </div>
-        <div class="reps">
-          <h1>No. Reps:</h1>
-          <p>{{ set.rep }}</p>
-        </div>
-        <div class="weight">
-          <h1>Weight:</h1>
-          <p>{{ set.weight }}</p>
-        </div>
-        <div class="equip">
-          <h1>Equipment Used:</h1>
-          <p>{{ set.equipment }}</p>
-        </div>
-        <div class="delete">
-          <form method="POST" action="{% url 'set-delete' workout.id set.id %}">
-            {% csrf_token %}
-            <button type="submit">Delete</button>
-          </form>
+        <div class="set-on-flip">
+          <div class="reps">
+            <h1>No. Reps:</h1>
+            <p>{{ set.rep }}</p>
+          </div>
+          <div class="weight">
+            <h1>Weight:</h1>
+            <p>{{ set.weight }}</p>
+          </div>
+          <div class="equip">
+            <h1>Equipment Used:</h1>
+            <p>{{ set.equipment }}</p>
+          </div>
+          <div class="delete">
+            <form method="POST" action="{% url 'set-delete' workout.id set.id %}" id="delete-set-div">
+              {% csrf_token %}
+              <button type="submit" class="bw-btn" id="set-delete-btn">X</button>
+            </form>
+          </div>
         </div>
       </div>
       {% endfor %}

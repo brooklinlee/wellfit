@@ -74,6 +74,26 @@ button:hover {
   box-shadow: var(--blue) 0 3px 8px;
 }
 
+.bw-btn {
+  background: var(--background);
+  border-radius: 999px;
+  box-sizing: border-box;
+  color: var(--grey);
+  cursor: pointer;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 24px;
+  padding: 10px 20px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: fit-content;
+  word-break: break-word;
+  border: 0;
+  transition: box-shadow .2s;
+}
+
 .btn-div {
   display: flex;
   justify-content: space-evenly;

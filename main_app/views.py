@@ -47,6 +47,7 @@ def workout_index(request):
   user=request.user
   today = date.today()
   request.has_worked_out_today = Workout.objects.filter(user=user, date=today).exists()
+  workouts = Workout.objects.filter(user=request.user).order_by('-date')
   return render(request, 'workouts/index.html', {'workouts': workouts})
 
 @login_required

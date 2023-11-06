@@ -31,7 +31,6 @@ WORKOUT_TYPE_CHOICES = [
 
 class Workout(models.Model):
   date = models.DateField()
-  # title = models.CharField(max_length=100)
   duration = models.CharField(
     max_length=50,
     choices=DURATION_CHOICES,
