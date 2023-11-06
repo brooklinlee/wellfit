@@ -9,12 +9,32 @@
 
   <div class="header">
     <h1>{{workout.workout_type}}</h1>
-    
   </div>
-  
-  <p>{{workout.date}}</p>
-  <p>{{workout.duration}}</p>
-  <p>{{workout.description}}</p>
+  <!-- <div class="wrkt-detials">
+    <div class="date">
+      <h1>Date: </h1>
+      <p>{{workout.date}}</p>
+    </div>
+    <div class="duration">
+      <h1>Duration: </h1>
+      <p>{{workout.duration}}</p>
+    </div>
+  </div> -->
+  <div class="wrkt">
+    <div class="wrkt-detials">
+      <div class="date">
+        <h1>Date: </h1>
+        <p>{{workout.date}}</p>
+      </div>
+      <div class="duration">
+        <h1>Duration: </h1>
+        <p>{{workout.duration}}</p>
+      </div>
+    </div>
+    <div class="description">
+      <p>{{workout.description}}</p>
+    </div>
+  </div>
 
   <a href="{% url 'workout-update' workout.id %}"><button>Update</button></a>
   <a href="{% url 'workout-delete' workout.id %}"><button>Delete</button></a>

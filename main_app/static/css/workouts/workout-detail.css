@@ -1,8 +1,3 @@
-/* main {
-  padding-top: 80px;
-} */
-
-
 h1 {
   color: var(--blue);
   font-size: 60px;
@@ -68,4 +63,75 @@ td > textarea {
   font-size: 70px;
   width: fit-content;
   border-bottom: 3px solid var(--background);
+}
+
+/* .wrkt-detials {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin: 24px auto;
+}
+
+.date, .duration {
+  display: flex;
+  align-self: center;
+}
+
+.date > *,
+.duration > * {
+  margin: 0;
+  padding: 0;
+}
+
+.date p, 
+.duration p {
+  padding-top: 9px;
+  margin-left: 10px;
+  font-size: 32px;
+}
+
+.date h1, 
+.duration h1 {
+  font-size: 40px;
+} */
+
+.wrkt {
+  display: flex;
+  flex-direction: row;
+}
+
+.wrkt-detials {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin: 24px auto;
+}
+
+.date, .duration {
+  display: flex;
+  align-self: center;
+}
+
+.date p, 
+.duration p {
+  padding-top: 4px;
+  margin-left: 20px;
+  font-size: 32px;
+}
+
+.date h1, 
+.duration h1 {
+  font-size: 40px;
+}
+
+.description {
+  width: 50%;
+  align-self: center;
+  margin: 24px;
+  padding-right: 48px;
+}
+
+.description p {
+  font-size: 20px;
 }
