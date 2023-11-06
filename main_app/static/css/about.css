@@ -24,7 +24,7 @@ main {
   margin-top: 100px;
 }
 
-@media (max-width: 840px) {
+@media (max-width: 965px) {
   main {
     flex-direction: column;
     align-items: center;

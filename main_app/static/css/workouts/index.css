@@ -85,7 +85,7 @@ main {
   margin: 0; 
 }
 
-@media (max-width: 750px) {
+@media (max-width: 965px) {
   .index-header{
     flex-direction: column;
     align-items: center;
