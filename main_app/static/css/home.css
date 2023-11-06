@@ -145,29 +145,35 @@ main {
 .orange-banner {
   height: 200px;
   width: 100%;
-  background-color: var(--orange);
+  background-color: var(--background);
   display: flex;
   flex-direction: row;
+  background-image: linear-gradient(to left top, #6a8af8, #b17be6, #dd6cc7, #f765a2, #ff697c, #ff6e75, #ff736e, #ff7968, #ff787d, #ff7891, #ff7ca6, #ff81ba);
+  /* border-top: 24px solid var(--blue); */
+  /* border-bottom: 24px solid var(--blue); */
 }
 
 .orange-banner > div:nth-child(1) {
   width: 60%;
   margin: 80px;
   align-self: center;
+  
 }
 
 .orange-banner > div:nth-child(2) {
   width: 40%;
-  border-left: 3px solid var(--background);
   align-self: center;
+  padding-right: 48px;
+  
 }
 
 
 .orange-banner h1 {
   font-size: 35px;
-  color: var(--background);
+  color: var(--grey);
   margin-left: 40px;
   align-self: center;
+  margin-left: 0;
 }
 
 .orange-banner p {
@@ -178,7 +184,7 @@ main {
 /* section 4 */
 .cta{
   width: 100%;
-  height: 60vh;
+  height: 80vh;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -186,17 +192,17 @@ main {
 
 .cta-img {
   width: 50%;
-  background-color: var(--pink);
+  background-color: var(--blue);
   display: flex;
   justify-content: center;
   align-items: center;
-  
+  height: inherit;
 }
 
 .cta-img-div {
-  height: 300px;
-  width: 300px;
-  border-radius: 80px;
+  height: 400px;
+  width: 400px;
+  border-radius: 8px 48px 8px 8px; 
   background-image: url('../images/6.svg');
   background-size: cover;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
@@ -210,6 +216,11 @@ main {
 
 .cta-txt h1 {
   font-size: 40px;
+  margin-top: 0;
+}
+
+.cta-txt p {
+  margin-bottom: 48px;
 }
 
 @media (max-width: 965px) {
@@ -258,15 +269,24 @@ main {
     height: fit-content;
   }
 
+  .orange-banner > div:nth-child(1){
+    margin: 24px auto;
+  }
+
   .orange-banner > div:nth-child(2) {
-    border-top: 3px solid var(--background);
+    /* border-top: 3px solid var(--background); */
     border-left: none;
+    padding: 0;
+    
   }
 
   .orange-banner h1 {
-    margin: 48px auto;
+    margin: 0px auto 48px;
     padding: 0;
-    align-self: center;
+  }
+
+  .orange-banner h1 br {
+    display: none;
   }
 
   .cta{
@@ -274,10 +294,15 @@ main {
     align-items: center;
     margin: 0;
     text-align: center;
-    padding-top: 48px;
+    /* padding-top: 48px; */
+    height: fit-content;
   }
 
   .cta-img {
     display: none;
+  }
+
+  .cta-txt {
+    margin: 48px auto;
   }
 }
