@@ -134,6 +134,13 @@ td > textarea {
   box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
 }
 
+.set-card:hover {
+  background-image: linear-gradient(to right bottom, #6a8af8, #b17be6, #dd6cc7, #f765a2, #ff697c, #ff6e75, #ff736e, #ff7968, #ff787d, #ff7891, #ff7ca6, #ff81ba);
+  border-radius: 4px 36px 4px 36px;
+  transform: scale(1.1);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
 .reps,
 .equip,
 .delete {
@@ -146,21 +153,35 @@ td > textarea {
   display: contents;
 }
 
-.set-card:hover {
-  background-image: linear-gradient(to right bottom, #6a8af8, #b17be6, #dd6cc7, #f765a2, #ff697c, #ff6e75, #ff736e, #ff7968, #ff787d, #ff7891, #ff7ca6, #ff81ba);
-  border-radius: 4px 36px 4px 36px;
-  transform: scale(1.1);
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+.set-card:hover .movement {
+  display: none;
 }
 
-.set-card h1 {
+
+.movement h1 {
+  color: var(--grey);
   font-size: 40px;
-  margin-bottom: 8px;
+  text-align: left;
+  line-height: 0.9;
+  margin: 0 auto;
 }
 
-.set-card p {
+
+.reps h1,
+.equip h1 {
+  color: var(--grey);
+  font-size: 24px;
+  text-align: left;
+  line-height: 0.9;
+  margin: 0;
+  padding-bottom: 5px;
+}
+
+.reps p,
+.equip p {
   font-size: 20px;
-  margin: 0; 
+  margin: 0;
+  padding-bottom: 10px; 
 }
 
 @media (max-width: 750px) {

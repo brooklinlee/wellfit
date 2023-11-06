@@ -40,11 +40,10 @@
       {% for set in workout.set_set.all %}
       <div class="set-card">
         <div class="movement">
-          <h1>Movement:</h1>
-          <p>{{ set.movement }}</p>
+          <h1>{{ set.movement }}</h1>
         </div>
         <div class="reps">
-          <h1>Num of Reps:</h1>
+          <h1>No. Reps:</h1>
           <p>{{ set.rep }}</p>
         </div>
         <div class="equip">
@@ -59,7 +58,7 @@
         </div>
       </div>
       {% endfor %}
-      
+
     </div>
 
 <h1>Add a Set to your Workout</h1>
