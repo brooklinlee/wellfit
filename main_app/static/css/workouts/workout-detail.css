@@ -1,3 +1,7 @@
+main {
+  padding-bottom: 24px;
+}
+
 h1 {
   color: var(--blue);
   font-size: 60px;
@@ -117,6 +121,18 @@ td > textarea {
   margin: 24px 100px;
 }
 
+.btn-div {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 24px 0;
+}
+
+.if-no-sets {
+  font-size: 36px;
+  color: var(--grey);
+  margin-top: 60px;
+}
+
 .set-card {
   height: 280px;
   width: 280px;
@@ -159,7 +175,6 @@ td > textarea {
   display: none;
 }
 
-
 .movement h1 {
   color: var(--grey);
   font-size: 40px;
@@ -167,7 +182,6 @@ td > textarea {
   line-height: 0.9;
   margin: 0 auto;
 }
-
 
 .reps h1,
 .equip h1,

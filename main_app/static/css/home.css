@@ -261,6 +261,28 @@ main {
     display: none;
   }
 
+#banner-btn {
+  background: var(--background);
+  border-radius: 999px;
+  box-sizing: border-box;
+  color: var(--blue);
+  cursor: pointer;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 800;
+  line-height: 24px;
+  opacity: 1;
+  outline: 0 solid transparent;
+  padding: 8px 18px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: fit-content;
+  word-break: break-word;
+  border: 0;
+  transition: box-shadow .2s;
+}
+
+
   .orange-banner {
     flex-direction: column;
     align-items: center;

@@ -12,9 +12,9 @@
       <img src="{% static "images/WellFit-logo.svg" %}" alt="WellFit Logo">
       <h1 class="title">Get ready </br>for change </br>to happen</h1>
       {% if user.is_authenticated %}
-      <a href="{% url 'workout-create' %}"><button>Log a Workout</button></a>
+      <a href="{% url 'workout-create' %}"><button id="banner-btn">Log a Workout</button></a>
       {% else %}
-      <a href="/"><button>Sign In</button></a>
+      <a href="/"><button id="banner-btn">Sign In</button></a>
       {% endif %}
     </div>
     <div class="banner-image">

@@ -26,17 +26,18 @@
       <p>{{workout.description}}</p>
     </div>
   </div>
-  <a href="{% url 'workout-update' workout.id %}"><button>Update</button></a>
-  <a href="{% url 'workout-delete' workout.id %}"><button>Delete</button></a>
-    <div class="if-set">
+  <div class="btn-div">
+    <a href="{% url 'workout-update' workout.id %}"><button>Update</button></a>
+    <a href="{% url 'workout-delete' workout.id %}"><button>Delete</button></a>
+  </div>
+  <div class="if-set">
       {% if workout.set_set.all %}
       <h1 class="">Sets</h1>
       {% else %}
-      <h1>Add a set to your workout?</h1>
+      <h1 class="if-no-sets">You have no sets associated with this workout</h1>
       {% endif%}
     </div>
     <div class="set-container">
-
       {% for set in workout.set_set.all %}
       <div class="set-card">
         <div class="movement">
@@ -62,18 +63,19 @@
         </div>
       </div>
       {% endfor %}
-
     </div>
-
 <h1>Add a Set to your Workout</h1>
 <form action="{% url 'add-set' workout.id %}" method="post" autocomplete="off">
   <table>
   {% csrf_token %}
   {{ set_form.as_table}}
 </table>
+<div class="btn-div">
   <button type="submit">Add a Set</button>
+</div>
 </form>
-
-<a href="{% url 'workout-index' %}"><button>Back to your profile</button></a>
+<div class="btn-div">
+  <a href="{% url 'workout-index' %}"><button>Back to your profile</button></a>
+</div>
 
 {% endblock%}
