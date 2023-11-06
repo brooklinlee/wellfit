@@ -1,0 +1,24 @@
+main {
+  padding-top: 80px;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  font-size: 80px;
+  width: 50%;
+  padding-left: 150px;
+}
+
+#wrkt {
+  color: var(--blue);
+}
+
+form {
+  width: 50%;
+  padding-left: 150px;
+  display: flex;
+  flex-direction: row;
+}
