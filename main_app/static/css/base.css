@@ -35,6 +35,7 @@ body {
 
 h1 {
   font-family: 'DM Serif Display', serif;
+  color: var(--grey);
 }
 
 a {
@@ -50,6 +51,61 @@ label {
 
 .title {
   font-family: 'Berkshire Swash', serif;
+}
+
+
+button {
+  background: var(--blue);
+  border-radius: 999px;
+  /* box-shadow: var(--grey) 0 10px 20px -10px; */
+  box-sizing: border-box;
+  color: var(--background);
+  cursor: pointer;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 800;
+  line-height: 24px;
+  opacity: 1;
+  outline: 0 solid transparent;
+  padding: 8px 18px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: fit-content;
+  word-break: break-word;
+  border: 0;
+  transition: box-shadow .2s;
+}
+
+.button-42 {
+  background-color: initial;
+  background-image: linear-gradient(-180deg, #FF7E31, #E62C03);
+  border-radius: 6px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 2px 4px;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Inter,-apple-system,system-ui,Roboto,"Helvetica Neue",Arial,sans-serif;
+  height: 40px;
+  line-height: 40px;
+  outline: 0;
+  overflow: hidden;
+  padding: 0 20px;
+  pointer-events: auto;
+  position: relative;
+  text-align: center;
+  touch-action: manipulation;
+  user-select: none;
+  -webkit-user-select: none;
+  vertical-align: top;
+  white-space: nowrap;
+  width: 100%;
+  z-index: 9;
+  border: 0;
+  
+}
+
+button:hover {
+  box-shadow: var(--blue) 0 3px 8px;
 }
 
 /* Nav Bar */

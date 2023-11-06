@@ -5,7 +5,7 @@ from django import forms
 class SetForm(ModelForm):
   class Meta:
     model = Set
-    fields = ['rep', 'movement', 'weight', 'equipment'] 
+    fields = ['movement', 'rep', 'weight', 'equipment'] 
     widgets = {
       'rep': NumberInput(attrs={'step': 1}),
       'weight': NumberInput(attrs={'step': 5}),
